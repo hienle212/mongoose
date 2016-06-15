@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mongoose Dashboard Modularized</title>
+</head>
+<body>
+<h1>List of Student</h1>
+<% for (var i = 0; i < result.length; i++){ %>
+<p><a href="/showinfo/<%= result[i]._id %>"><%= result[i].name %></a></p>
+<form action="/destroy/<%= result[i]._id %>" method="post">
+<button>Remove</button>
+</form>
+<% } %>
+<form action="/new" method="post">
+Name : <input type="text" name="name"><br>
+Class : <input type="text" name="class"><br>
+<button>Add new</button>
+</form>
+</body>
+</html>

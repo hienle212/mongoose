@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mongoose Dashboard Modularized</title>
+</head>
+<body>
+<h1>Student's info</h1>
+<% for (var i = 0; i < result.length; i++){ %>
+<p>Name : <%= result[i].name %></p>
+<p>Class : <%= result[i].class %></p>
+<p>Date Joined : <%= result[i].createdAt  %></p>
+<button><a href="/">Go Back</a></button>
+<button><a href="/editinfo/<%= result[i]._id %>">Edit</a></button>
+<% } %>
+
+</body>
+</html>
